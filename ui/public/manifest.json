@@ -1,0 +1,20 @@
+{
+  "short_name": "Pokedex Ap",
+  "name": "My Pokedex App",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./assets/pokedex_logo-Cm6fL-0e.png",
+      "sizes": "979x979",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@my-pokedex-app/api",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/api-demo.umd.cjs",
+  "module": "./dist/api-demo.js",
+  "types": "./dist/api-demo.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/api-demo.js",
+      "require": "./dist/api-demo.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:watch": "tsc && vite build --watch",
+    "preview": "vite preview",
+    "check-types": "tsc --noEmit",
+    "test.unit": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6",
+    "vite": "^5.4.10",
+    "vite-plugin-dts": "^4.3.0",
+    "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "@ionic/storage": "^4.0.0"
+  }
+}

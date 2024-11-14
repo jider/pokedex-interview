@@ -1,0 +1,24 @@
+{
+  "name": "@my-pokedex-app/monorepo",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test.unit",
+    "start": "npm run preview --workspace ui"
+  },
+  "keywords": [],
+  "author": "JIDR",
+  "license": "ISC",
+  "description": "",
+  "packageManager": "npm@10.8.2",
+  "workspaces": [
+    "api",
+    "ui"
+  ],
+  "devDependencies": {
+    "turbo": "^2.2.3"
+  }
+}
