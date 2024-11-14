@@ -7,6 +7,7 @@ export const usePokedexQueries = () => {
     queryKey: [QUERY_KEYS.pokedex],
     queryFn: () => getPokemons(),
     staleTime: 1000 * 60,
+    networkMode: 'always'
   })
 
   return {

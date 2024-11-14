@@ -13,12 +13,14 @@ export const useFavoriteMutations = () => {
 
   const {mutate: mutateAdd, isPending: isPendingAdd} = useMutation({
     mutationFn: addFavorite,
-    onSuccess: (id) => onSuccess(`${id}`)
+    onSuccess: (id) => onSuccess(`${id}`),
+    networkMode: 'always'
   })
 
   const {mutate: mutateRemove, isPending: isPendingRemove} = useMutation({
     mutationFn: removeFavorite,
-    onSuccess: (id) => onSuccess(`${id}`)
+    onSuccess: (id) => onSuccess(`${id}`),
+    networkMode: 'always'
   })
 
 

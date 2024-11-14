@@ -13,12 +13,14 @@ export const usePokedexMutations = () => {
 
   const {mutate: mutateAdd, isPending: isPendingAdd} = useMutation({
     mutationFn: addPokemon,
-    onSuccess: (id) => onSuccess(`${id}`)
+    onSuccess: (id) => onSuccess(`${id}`),
+    networkMode: 'always'
   })
 
   const {mutate: mutateDelete, isPending: isPendingDelete} = useMutation({
     mutationFn: deletePokemon,
-    onSuccess: (id) => onSuccess(`${id}`)
+    onSuccess: (id) => onSuccess(`${id}`),
+    networkMode: 'always'
   })
 
   const isPokedexMutationPending = useMemo(() => isPendingAdd || isPendingDelete, [isPendingAdd, isPendingDelete])
