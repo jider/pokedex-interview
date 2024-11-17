@@ -7,7 +7,8 @@ export const usePokemonDetails = (id: string) => {
     queryKey: [QUERY_KEYS.pokedex, id],
     queryFn: () => fetchPokemonDetailsById(id),
     staleTime: 1000 * 60 * 60,
-    networkMode: 'always'
+    networkMode: 'always',
+    retry: 3
   })
 
   return {
