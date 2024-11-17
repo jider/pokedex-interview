@@ -10,10 +10,10 @@ interface PokemonStatsProps {
   title: string
 }
 
-function PokemonMainStats({stats}: PokemonStatsProps) {
+function PokemonMainStats({stats, title}: PokemonStatsProps) {
   return (
     <VStack className={pokemonStatsStyles}>
-      <strong>Stats</strong>
+      <strong>{title}</strong>
       {stats.map(stat => (
         <div key={stat.name} className={statWrapper}>
           <BaseStat stat={stat}/>
